@@ -228,7 +228,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &35575199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1099,7 +1099,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &920917137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1321,11 +1321,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SnippitDictionary:
   - snippitTag: TEST
-    taggedAsset: {fileID: 458977258}
+    taggedAsset: {fileID: 920917136}
   - snippitTag: Bubble
-    taggedAsset: {fileID: 1197428747}
+    taggedAsset: {fileID: 35575198}
   - snippitTag: nonsense
-    taggedAsset: {fileID: 617096357}
+    taggedAsset: {fileID: 1709357061}
 --- !u!1 &1197428747
 GameObject:
   m_ObjectHideFlags: 0
@@ -1426,7 +1426,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1208216391
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2220,7 +2220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1709357062
 MonoBehaviour:
   m_ObjectHideFlags: 0

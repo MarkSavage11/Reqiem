@@ -10,6 +10,7 @@ public class SceneStitcher : MonoBehaviour
     [SerializeField] private Vector2 startPosition;
     [SerializeField] private SpriteRenderer background;
     [SerializeField] private List<ChunkPair> Sequence = new List<ChunkPair>();
+    [SerializeField] private AudioManager audioManager;
 
     private List<SceneChunk> loadedChunks = new List<SceneChunk>();
     private List<ChunkPair> loadedEpochPairs = new List<ChunkPair>();
@@ -33,6 +34,8 @@ public class SceneStitcher : MonoBehaviour
         positionToLoad = startPosition;
         PlaceAllChunks();
         currentEpoch = loadedEpochPairs[0];
+
+        audioManager.StartMusic();
     }
 
 
@@ -93,6 +96,7 @@ public class SceneStitcher : MonoBehaviour
             {
                 currentEpoch = loadedEpochPairs[sequenceIndex];
             }
+            audioManager.AddLayer();
         }
     }
 

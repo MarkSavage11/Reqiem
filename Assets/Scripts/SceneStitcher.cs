@@ -32,6 +32,7 @@ public class SceneStitcher : MonoBehaviour
     {
         positionToLoad = startPosition;
         PlaceAllChunks();
+        currentEpoch = loadedEpochPairs[0];
     }
 
 
@@ -97,7 +98,7 @@ public class SceneStitcher : MonoBehaviour
 
     private void InitializeEpoch()
     {
-
+        currentEpoch.epoch.LoadScene();
     }
 
     private void LoopPlayer()

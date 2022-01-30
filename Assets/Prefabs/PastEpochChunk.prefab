@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8097424962382679761}
   - component: {fileID: 1208028133065713238}
   - component: {fileID: 5257552977249898138}
+  - component: {fileID: 2281621363444888968}
   m_Layer: 0
   m_Name: foreground
   m_TagString: Untagged
@@ -95,7 +96,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9517d0fe5acc436469d9d37bf0def6e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UseClamping: 0
+  UseClamping: 1
+--- !u!114 &2281621363444888968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2475724850536413656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 095353a284272bb47bd91ee21632b274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SnippitID: epochTest3
 --- !u!1 &7177361460816471436
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,6 +121,7 @@ GameObject:
   - component: {fileID: 8938743230531832004}
   - component: {fileID: 7603963382228720593}
   - component: {fileID: 6837879639859948}
+  - component: {fileID: 2779051076384223542}
   m_Layer: 0
   m_Name: mid_background
   m_TagString: Untagged
@@ -191,7 +206,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9517d0fe5acc436469d9d37bf0def6e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UseClamping: 0
+  UseClamping: 1
+--- !u!114 &2779051076384223542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7177361460816471436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 095353a284272bb47bd91ee21632b274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SnippitID: epochTest1
 --- !u!1 &9083236514197654099
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,6 +231,7 @@ GameObject:
   - component: {fileID: 7819355406247890354}
   - component: {fileID: 4536634664410792431}
   - component: {fileID: 2084959010114559774}
+  - component: {fileID: 5793582859284838466}
   m_Layer: 0
   m_Name: farground
   m_TagString: Untagged
@@ -287,7 +316,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9517d0fe5acc436469d9d37bf0def6e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UseClamping: 0
+  UseClamping: 1
+--- !u!114 &5793582859284838466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9083236514197654099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 095353a284272bb47bd91ee21632b274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SnippitID: epochTest2
 --- !u!1001 &8881173606747796348
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -355,6 +397,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1939976818372025047, guid: c11ae3f49fa3e374889910bfc6af06d4,
+        type: 3}
+      propertyPath: epochData
+      value: 
+      objectReference: {fileID: 11400000, guid: 614911f43132f874d912ee395f82e808,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c11ae3f49fa3e374889910bfc6af06d4, type: 3}
 --- !u!4 &7038117914033547690 stripped

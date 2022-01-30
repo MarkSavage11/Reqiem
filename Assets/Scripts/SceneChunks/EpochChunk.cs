@@ -4,6 +4,19 @@ using UnityEngine;
 
 public class EpochChunk : SceneChunk
 {
+    [SerializeField] private EpochData epochData;
+
+    List<SnipAss> snipAssets = new List<SnipAss>();
+
+    private void Start()
+    {
+        snipAssets = new List<SnipAss>(GetComponentsInChildren<SnipAss>());
+        foreach(SnipAss snip in snipAssets)
+        {
+            snip.gameObject.SetActive(false);
+        }
+    }
+
 
     public override float GetWidth()
     {
@@ -12,6 +25,9 @@ public class EpochChunk : SceneChunk
 
     public override void LoadScene()
     {
-        throw new System.NotImplementedException();
+        foreach(SnipAss asset in snipAssets)
+        {
+            asset.gameObject.SetActive(epochData.GetUsedSnippitIDs().Contains(asset.SnippitID));
+        }
     }
 }

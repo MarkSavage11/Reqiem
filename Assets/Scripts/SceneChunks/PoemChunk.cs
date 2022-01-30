@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PoemChunk : SceneChunk
 {
+    [SerializeField] private EpochData epochData;
     [SerializeField] private PoemZone poemZone;
     private bool _showPoem;
 

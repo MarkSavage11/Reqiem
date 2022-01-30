@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class SceneStitcher : MonoBehaviour
 {
+
     [SerializeField] private SharkCharacter player;
     [SerializeField] private Vector2 startPosition;
     [SerializeField] private SpriteRenderer background;
@@ -21,7 +22,6 @@ public class SceneStitcher : MonoBehaviour
 
     private Vector2 positionToLoad;
 
-    //Start the Sequence, begin loading
     private void Awake()
     { 
         SceneChunk.OnSceneComplete += TransitionNext;

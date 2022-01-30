@@ -6,8 +6,12 @@ using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
-    public Camera cam;
-    public Transform subject;
+    public bool UseClamping = false;
+
+    private Camera cam;
+    private Transform subject;
+
+    private SpriteRenderer renderer;
 
     Vector2 startPosition;
     float startZ;
@@ -18,6 +22,13 @@ public class Parallax : MonoBehaviour
 
     float parallaxFactor => Mathf.Abs(distanceFromSubject) / clippingPlane;
 
+    private void Awake()
+    {
+        cam = Camera.main;
+        subject = FindObjectOfType<SharkCharacter>().transform;
+        renderer = GetComponent<SpriteRenderer>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,9 +36,11 @@ public class Parallax : MonoBehaviour
         startZ = transform.position.z;
     }
 
+
     private void Update()
     {
         Vector2 newPos = startPosition + travel * parallaxFactor;
+        float clampedX = UseClamping ? Mathf.Clamp(newPos.x, startPosition.x - renderer.bounds.extents.x / 2, startPosition.x + renderer.bounds.extents.x / 2) : newPos.x;
         transform.position = new Vector3(newPos.x, newPos.y, startZ);
     }
 }

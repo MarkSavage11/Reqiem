@@ -179,7 +179,7 @@ MonoBehaviour:
   MusicLayer1Source: {fileID: 4110182508139169227}
   MusicLayer2Source: {fileID: 4110182507993440867}
   MusicLayer3Source: {fileID: 4110182506747631773}
-  fadeInTime: 1
+  fadeInTime: 1.5
 --- !u!82 &4110182507305267047
 AudioSource:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class SceneStitcher : MonoBehaviour
     [SerializeField] private SpriteRenderer background;
     [SerializeField] private List<ChunkPair> Sequence = new List<ChunkPair>();
     [SerializeField] private AudioManager audioManager;
+    [SerializeField] private Fader fader;
 
     private List<SceneChunk> loadedChunks = new List<SceneChunk>();
     private List<ChunkPair> loadedEpochPairs = new List<ChunkPair>();
@@ -36,6 +37,7 @@ public class SceneStitcher : MonoBehaviour
         currentEpoch = loadedEpochPairs[0];
 
         audioManager.StartMusic();
+        fader.FadeIn();
     }
 
 
@@ -109,7 +111,12 @@ public class SceneStitcher : MonoBehaviour
     {
         player.transform.position = startPosition;
         sequenceIndex = 0;
+        BeauRoutine.Routine.Start(FadeInOut());
 
+        IEnumerator FadeInOut(){
+            yield return fader.FadeOutRoutine();
+            yield return fader.FadeInRoutine();
+        }
     }
 
     private void OnDestroy()

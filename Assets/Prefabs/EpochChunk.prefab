@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startBoundary: {fileID: 1939976818519748087}
   endBoundary: {fileID: 1939976819207069380}
+  epochData: {fileID: 0}
 --- !u!1 &1939976818519748084
 GameObject:
   m_ObjectHideFlags: 0

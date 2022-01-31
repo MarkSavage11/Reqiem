@@ -109,12 +109,12 @@ public class SceneStitcher : MonoBehaviour
 
     private void LoopPlayer()
     {
-        player.transform.position = startPosition;
         sequenceIndex = 0;
         BeauRoutine.Routine.Start(FadeInOut());
 
         IEnumerator FadeInOut(){
             yield return fader.FadeOutRoutine();
+            player.transform.position = startPosition;
             yield return fader.FadeInRoutine();
         }
     }

@@ -7,10 +7,12 @@ public class SnippitData : ScriptableObject
 {
     public string UID;
     public string Text;
-    public Font Font;
+    public TMPro.TMP_FontAsset Font;
 
     public string AsString()
     {
-        return string.Format("<font=\"{0}\">{1}</font>", Font.fontNames[0], Text);
+        return Text;
+        //TODO: GET FONTS WORKING
+        //return string.Format("<font=\"{0}\">{1}</font>", Font.faceInfo.familyName, Text);
     }
 }

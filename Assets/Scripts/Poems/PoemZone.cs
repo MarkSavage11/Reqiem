@@ -5,7 +5,7 @@ using UnityEngine;
 public class PoemZone : MonoBehaviour
 {
     [SerializeField] private Collider2D zone;
-
+    [SerializeField] private ReadSnippets poemManager;
 
     public static event System.Action OnPoemStart;
     public static event System.Action OnPoemComplete;
@@ -22,11 +22,16 @@ public class PoemZone : MonoBehaviour
 
     public void StartPoem()
     {
-        CompletePoem(); //Placeholder
+        //CompletePoem(); //Placeholder
+        poemManager.Open();
+        poemManager.OnSubmit += CompletePoem;
+        poemManager.InitializeSnippitData();
     }
 
     public void CompletePoem()
     {
+        poemManager.Close();
+        poemManager.OnSubmit -= CompletePoem;
         OnPoemComplete?.Invoke();
     }
 }

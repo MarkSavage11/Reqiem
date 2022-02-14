@@ -7,13 +7,44 @@ using TMPro;
 
 public class ReadSnippets : MonoBehaviour
 {
+    public EpochData epochData;
     [SerializeField] private List<GameObject> panels;
+    [SerializeField] private List<SnippitHolder> snippitHolders = new List<SnippitHolder>();
     [SerializeField] private Button submitButton;
-    private List<string> snippetList = new List<string>();
+    private List<SnippitData> snippetList = new List<SnippitData>();
+
+    public event Action OnSubmit;
 
     private void Awake()
     {
         submitButton.onClick.AddListener(GetSnippets);
+
+        //FOR NOW
+        InitializeSnippitData();
+    }
+
+    public void Open()
+    {
+        this.gameObject.SetActive(true);
+    }
+
+    public void Close()
+    {
+        this.gameObject.SetActive(false);
+    }
+
+    //initializes all the snippit holders based on the Epoch Data
+    public void InitializeSnippitData()
+    {
+        int index = 0;
+        foreach(var snip in snippitHolders)
+        {
+            snip.gameObject.SetActive(index < epochData.SnippitPool.Count);
+            if(index < epochData.SnippitPool.Count)
+                snip.Initialize(epochData.SnippitPool[index]);
+            index++;
+
+        }
     }
 
     private void GetSnippets()
@@ -30,22 +61,17 @@ public class ReadSnippets : MonoBehaviour
 
 
             // If the snippet exists, grab the text and put it in the snippet list. Otherwise, put in a blank spot
-            if (snippet != null)
+            if (snippet!= null)
             {
-                GameObject snippetChild = snippet.gameObject.transform.GetChild(0).gameObject;
-                string snippetText = snippetChild.GetComponent<TMP_Text>().text;
-                snippetList.Add(snippetText);
+                
+                snippetList.Add(snippet.GetComponent<SnippitHolder>().Identity);
             } else
             {
-                snippetList.Add("");
+                snippetList.Add(null);
             }
         }
 
-        // Prints out each snippet in the snippet list to the console
-        foreach (string snipp in snippetList)
-        {
-            Debug.Log(snipp);
-        }
-
+        epochData.LoadSnippits(snippetList);
+        OnSubmit?.Invoke();
     }
 }

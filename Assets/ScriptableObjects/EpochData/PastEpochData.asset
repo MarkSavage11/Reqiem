@@ -16,5 +16,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4f47400dda6424342825786828bf2915, type: 2}
   - {fileID: 11400000, guid: 56c99230a23427d478d1e871f15dcb7f, type: 2}
   - {fileID: 11400000, guid: 1bd7eeecc24ad9e4b8f7a11d6a749981, type: 2}
-  UsedSnippits: []
+  - {fileID: 11400000, guid: d909dd06e57496e449b28e33e4fcc17c, type: 2}
+  - {fileID: 11400000, guid: 39af260003bb78740aceae9064476b40, type: 2}
+  - {fileID: 11400000, guid: ce45d0eb928072f4f8dd4ea3a577b590, type: 2}
+  - {fileID: 11400000, guid: fddc9deb815cba34bbc10d9280938e35, type: 2}
+  - {fileID: 11400000, guid: 2bed5ff3f6e64a042a2878522e58cd85, type: 2}
+  - {fileID: 11400000, guid: a8ed0cca50cc0054f9bd9a0b29839eb6, type: 2}
+  - {fileID: 11400000, guid: 3ed5f82a999386243a9b8a7989e41327, type: 2}
+  - {fileID: 11400000, guid: ebf1114724694484e845ab05e9aeab82, type: 2}
+  - {fileID: 11400000, guid: 0c3226f3669ff5c4394f9ac6fda19b8d, type: 2}
   PoemOutput: {fileID: 11400000, guid: 74351728379efb1439af69521db29f4c, type: 2}

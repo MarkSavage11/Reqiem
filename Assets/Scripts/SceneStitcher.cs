@@ -111,6 +111,11 @@ public class SceneStitcher : MonoBehaviour
     {
         sequenceIndex = 0;
         BeauRoutine.Routine.Start(FadeInOut());
+        foreach(var chunk in loadedEpochPairs)
+        {
+            //chunk.poem.SetShowPoem(false);
+            //chunk.poem.LoadScene();
+        }
 
         IEnumerator FadeInOut(){
             yield return fader.FadeOutRoutine();
